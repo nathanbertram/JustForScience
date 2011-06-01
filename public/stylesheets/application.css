@@ -1,0 +1,101 @@
+* { margin: 0; padding: 0; }
+
+body {
+    background: #eee url('/images/for_science.png') 0 0 no-repeat;
+    margin: 0; padding: 0;
+    color: #333;
+    font-family: "Helvetica", Arial, Verdana, sans-serif;
+    text-align: center;
+    font-size: 12px;
+}
+
+div {
+    border: none;
+    text-align: left;
+    vertical-align: top;
+}
+
+h1 {
+  margin: 0 0 15px; padding: 0;
+  font-size: 25px;
+  text-align: center;
+  
+}
+
+#lol_topspace {
+  margin: 200px 0;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset ul {
+  margin: 0; padding: 0;
+  list-style: none;
+}
+
+fieldset ul li {
+  margin: 0;
+}
+
+.left { float: left; }
+.right { float: right; }
+
+#container {
+  display: block;
+  margin: 25px auto;
+  padding: 0;
+  width: 465px;
+  height: 300px;
+}
+
+#shift_left, #shift_both, #shift_right {
+  margin: 0 10px 0 0; padding: 0;
+  display: block;
+  background: #0F0f0f;
+  border: 1px solid #2f63a6;
+  border-bottom: 1px solid #a95555;
+  text-shadow: 0 -1px 0 #214c90;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 21px;
+  padding: 8px;
+  text-decoration: none;
+  width: 125px;
+  height: 15px;
+  cursor: pointer;
+  float: left;
+}
+
+#shift_left:hover, #shift_both:hover, #shift_right:hover {
+  background: #525252;
+}
+
+#shift_left {
+  text-align: left;
+}
+
+#shift_both {
+  text-align: center;
+}
+
+#shift_right {
+  text-align: right;
+}
+
+p#lols {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background: #d97474;
+  padding: 5px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 2em;
+}
+
