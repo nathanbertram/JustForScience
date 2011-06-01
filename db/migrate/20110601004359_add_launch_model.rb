@@ -1,6 +1,6 @@
 class AddLaunchModel < ActiveRecord::Migration
   def self.up
-    create_table :launch do |t|
+    create_table :launches do |t|
       t.string :email
       t.string :ip_address
       t.timestamps

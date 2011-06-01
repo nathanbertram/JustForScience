@@ -44,16 +44,30 @@ fieldset ul li {
 
 #container {
   display: block;
-  margin: 25px auto;
+  margin: 300px auto 0 auto;
   padding: 0;
-  width: 465px;
+  width: 525px;
   height: 300px;
 }
 
-#shift_left, #shift_both, #shift_right {
-  margin: 0 10px 0 0; padding: 0;
-  display: block;
-  background: #0F0f0f;
+.field_with_errors {
+  display: inline;
+}
+
+input.text {
+  border: 1px solid #CCC;
+  padding: 4px;
+  font-size: 1.5em;
+  position: relative;
+  top: 1px;
+}
+
+.field_with_errors input.text {
+  border: 1px solid red;
+}
+
+input.submit {
+  background: #d97474;
   border: 1px solid #2f63a6;
   border-bottom: 1px solid #a95555;
   text-shadow: 0 -1px 0 #214c90;
@@ -61,41 +75,12 @@ fieldset ul li {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   color: #fff;
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 21px;
-  padding: 8px;
-  text-decoration: none;
-  width: 125px;
-  height: 15px;
-  cursor: pointer;
-  float: left;
-}
-
-#shift_left:hover, #shift_both:hover, #shift_right:hover {
-  background: #525252;
-}
-
-#shift_left {
-  text-align: left;
-}
-
-#shift_both {
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 7px 0 8px 0;
   text-align: center;
+  text-decoration: none;
+  width: 225px;
+  cursor: pointer;
 }
-
-#shift_right {
-  text-align: right;
-}
-
-p#lols {
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-  background: #d97474;
-  padding: 5px;
-  color: #fff;
-  font-size: 16px;
-  line-height: 2em;
-}
-
