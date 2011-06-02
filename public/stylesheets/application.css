@@ -44,7 +44,7 @@ fieldset ul li {
 
 #container {
   display: block;
-  margin: 300px auto 0 auto;
+  margin: 275px auto 0 auto;
   padding: 0;
   width: 525px;
   height: 300px;
@@ -83,4 +83,11 @@ input.submit {
   text-decoration: none;
   width: 225px;
   cursor: pointer;
+}
+
+p#prompt_text {
+  font-weight: bold;
+  line-height: 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
