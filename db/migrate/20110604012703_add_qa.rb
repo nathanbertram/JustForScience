@@ -7,6 +7,7 @@ class AddQa < ActiveRecord::Migration
     
     create_table :answers do |t|
       t.integer :question_id
+      t.integer :votes
       t.string :text
       t.timestamps
     end
