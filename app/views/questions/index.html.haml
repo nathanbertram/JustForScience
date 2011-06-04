@@ -1,0 +1,7 @@
+%h2
+  Questions
+
+%ul
+  - @questions.each do |question|
+    %li
+      = link_to question.text, question_path(question)

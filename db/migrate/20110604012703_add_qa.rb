@@ -1,7 +1,7 @@
 class AddQa < ActiveRecord::Migration
   def self.up
     create_table :questions do |t|
-      t.string :text
+      t.string :text, :default => [].to_yaml
       t.timestamps
     end
     

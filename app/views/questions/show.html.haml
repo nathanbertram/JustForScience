@@ -1,0 +1,18 @@
+%h2
+  = @question.text
+
+- if @user_session.voted_for?(@question.id)
+  %p
+    You voted!
+
+  %ul
+    - @question.answers.each do |answer|
+      %li
+        = answer.vote_count
+        = answer.text
+
+- else
+  %ul
+    - @question.answers.each do |answer|
+      %li
+        = link_to answer.text, vote_for_question_path(@question, :answer_id => answer.id)
