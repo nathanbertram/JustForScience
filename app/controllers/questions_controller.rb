@@ -19,7 +19,7 @@ class QuestionsController < ApplicationController
   private
   
   def find_or_create_user_session
-    @user_session = UserSession.find_or_create_by_id(session[:user_session_id])
+    @user_session = UserSession.find_by_id(session[:user_session_id]) || UserSession.create
     session[:user_session_id] = @user_session
   end
   

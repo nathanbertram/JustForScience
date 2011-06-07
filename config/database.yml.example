@@ -5,5 +5,5 @@ development:
 
 test:
   adapter: mysql
-  database: justforscience_dev
+  database: justforscience_test
   username: root
