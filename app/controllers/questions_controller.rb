@@ -5,12 +5,13 @@ class QuestionsController < ApplicationController
     @question = Question.last
   end
   
+  def random
+    question = Question.random_not_in @user_session.question_ids
+    redirect_to question_path(question)
+  end
+  
   def show
-    if params[:random]
-      @question = Question.random_not_in @user_session.question_ids
-    else
-      @question = Question.find(params[:id], :include => [:answers])
-    end
+    @question = Question.find(params[:id], :include => [:answers])
   end
   
   def vote_for
