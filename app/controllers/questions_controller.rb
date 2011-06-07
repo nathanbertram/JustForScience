@@ -2,11 +2,15 @@ class QuestionsController < ApplicationController
   before_filter :find_or_create_user_session
   
   def index
-    @questions = Question.all(:include => [:answers])
+    @question = Question.last
   end
   
   def show
-    @question = Question.find(params[:id], :include => [:answers])
+    if params[:random]
+      @question = Question.random_not_in @user_session.question_ids
+    else
+      @question = Question.find(params[:id], :include => [:answers])
+    end
   end
   
   def vote_for
