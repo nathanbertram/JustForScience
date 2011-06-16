@@ -1,5 +1,6 @@
 JustForScience::Application.routes.draw do
   root :to => 'launches#index'
+  resources :suggestions
   resources :launches
   resources :questions do
     member do

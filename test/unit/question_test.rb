@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class QuestionTest < ActiveSupport::TestCase
-  
   def setup    
     (0..4).each do |i|
       current_question = Question.new(:text => "Some text")

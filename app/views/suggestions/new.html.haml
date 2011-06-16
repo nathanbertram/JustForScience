@@ -1,0 +1,8 @@
+- form_for @suggestion do |f|
+  %label
+    Your Email:
+  = f.text_field :email
+  %label
+    Message:
+  = f.text_field :message
+  = f.submit 'Contact Us', :class => :submit
