@@ -1,6 +1,6 @@
-%h2
-  Latest Question:
-  
-= render :partial => "question_preview", :locals => { :question => @question }
+- @questions.each do |question|
+  = render :partial => "question_preview", :locals => { :question => question }
+
+= paginate @questions, :remote => true, :outer_window => 1
 
 = link_to "Random question", random_questions_path

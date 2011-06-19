@@ -1,5 +1,5 @@
 .question_box
-  - if @question.preview_image
-    = link_to image_tag(@question.preview_image), question_path(@question), :class => "question_box_image"
+  - if question.preview_image
+    = link_to image_tag(question.preview_image), question_path(question), :class => "question_box_image"
   - else
-    = link_to @question.text, question_path(@question), :class => "question_box_text"
+    = link_to question.text, question_path(question), :class => "question_box_text"
