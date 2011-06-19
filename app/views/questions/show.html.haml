@@ -1,38 +1,13 @@
 - if @user_session.voted_for?(@question.id)
-  :plain
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-      <script type="text/javascript">
-        google.load("visualization", "1", {packages:["corechart"]});
-        google.setOnLoadCallback(drawChart);
-        function drawChart() {
-          var data = new google.visualization.DataTable();
-
-          data.addColumn('string', 'Task');
-          data.addColumn('number', '#{@question.text}');
-          
-          #{@question.build_chart_js}
-          
-          var chart = new google.visualization.PieChart(document.getElementById('science_chart'));
-          chart.draw(data, {width: 500, height: 425, backgroundColor: '#eeeeee', fontSize: 16, is3D: true, legend: 'bottom'});
-        }
-      </script>
-
   %h1
     Thanks for contributing to science!
-
-  :plain
-    <a href="http://twitter.com/share" class="twitter-share-button left" data-count="horizontal" data-text="For Science: Which shift button do you use?">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-  :plain
-    <div id="fb-root" class="left"></div><script src="http://connect.facebook.net/en_US/all.js#appId=175519085838808&amp;xfbml=1"></script><fb:like href="" send="true" width="350" show_faces="true" font=""></fb:like>
+  = render :partial => "twitter_share"
+  = render :partial => "gantt_chart", :locals => {:ganttable => @question, :element_id => "science_chart" }
 
   #science_chart
-  
-
 - else
-  
   %h2
     = @question.text
-  
   %ul
     - @question.answers.each do |answer|
       %li

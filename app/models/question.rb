@@ -4,10 +4,12 @@ class Question < ActiveRecord::Base
   validates_presence_of :text
   
   def build_chart_js
-    output = "data.addRows(#{answers.size});\n"
+    output = "data.addColumn('string', 'Task');\n"
+    output += "data.addColumn('number', '#{self.text}');\n"
+    output += "data.addRows(#{answers.size});\n"
     answers.each_with_index do |answer, index|
       output += "data.setValue(#{index}, 0, '#{answer.text}');\n"
-      output += "data.setValue(#{index}, 1, #{answer.votes || 1});\n"
+      output += "data.setValue(#{index}, 1, #{answer.vote_count || 0});\n"
     end
     
     output

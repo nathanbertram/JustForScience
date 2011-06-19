@@ -1,0 +1,14 @@
+:plain
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        
+        #{ganttable.build_chart_js}
+        
+        var chart = new google.visualization.PieChart(document.getElementById('#{element_id}'));
+        chart.draw(data, {width: 800, height: 425, backgroundColor: '#eeeeee', fontSize: 16, is3D: true, legend: 'bottom'});
+      }
+    </script>

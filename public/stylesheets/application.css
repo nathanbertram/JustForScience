@@ -46,8 +46,9 @@ fieldset ul li {
   display: block;
   margin: 10px auto;
   padding: 0;
-  width: 525px;
+  width: 800px;
   height: 300px;
+  text-align: center;
 }
 
 .field_with_errors {
