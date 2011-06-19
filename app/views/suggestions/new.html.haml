@@ -1,8 +1,12 @@
 - form_for @suggestion do |f|
-  %label
-    Your Email:
-  = f.text_field :email
-  %label
-    Message:
-  = f.text_field :message
-  = f.submit 'Contact Us', :class => :submit
+  %ul.suggestion_form
+    %li
+      %label
+        Email 
+      = f.text_field :email, :class => :text
+    %li
+      %label
+        Have a suggestion for a science experiment?
+      = f.text_area :message
+    %li
+      = f.submit 'Make Suggestion for Science!', :class => :submit

@@ -54,12 +54,20 @@ fieldset ul li {
   display: inline;
 }
 
-input.text {
+input.text, textarea {
   border: 1px solid #CCC;
   padding: 4px;
   font-size: 1.5em;
   position: relative;
   top: 1px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+textarea {
+  width: 475px;
+  height: 250px;
 }
 
 .field_with_errors input.text {
@@ -111,4 +119,20 @@ p#prompt_text {
     /* Width and height = .question_box width and height */
     width: 100%;
     height: 100%;
+}
+
+
+ul.suggestion_form {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+ul.suggestion_form li {
+  margin: 15px 0; padding: 0;
+}
+
+ul.suggestion_form label {
+  margin: 0 0 5px 0;
+  display: block;
+  font-size: 1.2em;
 }
