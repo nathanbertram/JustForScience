@@ -6,7 +6,11 @@
       = f.text_field :email, :class => :text
     %li
       %label
-        Interested in advertising with science?
+        - if params[:sponsor] == 'science'
+          Interested in advertising with science?
+        - else
+          Have a suggestion for a science experiment?
+        
       = f.text_area :message
     %li
       = f.submit params[:sponsor] == 'science' ? 'Advertise with science!' : 'Make Suggestion for Science!', :class => :submit
