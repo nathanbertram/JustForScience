@@ -1,9 +1,0 @@
-- if flash[:notice].present?
-  %h1
-    Thanks CHAP! We'll notify you when we need your help with MORE science!
-- else
-  %p#prompt_text
-    We're currently working on more of these scientific studies, add your email here to be updated when they're available!
-  - form_for @launch do |f|
-    = f.text_field :email, :class => :text
-    = f.submit 'Notify me of MORE science!', :class => :submit
