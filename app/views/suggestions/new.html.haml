@@ -1,12 +1,14 @@
-- form_for @suggestion do |f|
+= form_for @suggestion do |f|
   %ul.suggestion_form
     %li
       %label
-        Email 
+        Your Email
       = f.text_field :email, :class => :text
     %li
       %label
-        Have a suggestion for a science experiment?
+        Interested in advertising with science?
       = f.text_area :message
     %li
-      = f.submit 'Make Suggestion for Science!', :class => :submit
+      = f.submit params[:sponsor] == 'science' ? 'Advertise with science!' : 'Make Suggestion for Science!', :class => :submit
+      |
+      = link_to 'Go Back', root_path

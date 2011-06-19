@@ -10,5 +10,8 @@ JustForScience::Application.routes.draw do
       get :random
     end
   end
-
+  
+  match '/make_suggestion' => 'suggestions#new', :as => :make_suggestion
+  match '/sponsor_science' => 'suggestions#new', :as => :sponsor_science, :sponsor => 'science'
+  
 end
