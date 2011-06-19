@@ -21,7 +21,6 @@ h1 {
   margin: 0 0 15px; padding: 0;
   font-size: 25px;
   text-align: center;
-  
 }
 
 
@@ -51,8 +50,8 @@ fieldset ul li {
   display: block;
   margin: 10px auto;
   padding: 0;
-  width: 800px;
-  height: 300px;
+  width: 600px;
+  min-height: 600px;
 }
 
 .field_with_errors {

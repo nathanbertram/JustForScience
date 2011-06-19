@@ -20,4 +20,9 @@
   %body
     #container
       = yield
-    
+    %p#footer
+      = link_to "Random question", random_questions_path
+      |
+      = link_to "Make a Suggestion for Science", make_suggestion_path
+      |
+      = link_to "Want to advertise with science?", sponsor_science_path
