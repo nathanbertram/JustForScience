@@ -1,6 +1,6 @@
 %h2
   Latest Question:
+  
+= render :partial => "question_preview", :locals => { :question => @question }
 
-=link_to @question.text, question_path(@question)
-
-=link_to "Random question", random_questions_path
+= link_to "Random question", random_questions_path
