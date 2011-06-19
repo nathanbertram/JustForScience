@@ -134,5 +134,6 @@ ul.suggestion_form li {
 ul.suggestion_form label {
   margin: 0 0 5px 0;
   display: block;
+  font-weight: bold;
   font-size: 1.2em;
 }
