@@ -2,12 +2,17 @@ class QuestionsController < ApplicationController
   before_filter :find_or_create_user_session
   
   def index
-    @question = Question.last
+    @questions = Question.order(:created_at).page(params[:page] ? params[:page] : 1)
   end
   
   def random
     question = Question.random_not_in @user_session.question_ids
-    redirect_to question_path(question)
+    
+    if question
+      redirect_to question_path(question)
+    else
+      redirect_to root_path
+    end
   end
   
   def show

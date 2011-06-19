@@ -1,6 +1,8 @@
 class Question < ActiveRecord::Base
-  has_many :answers
+  # For kaminari. Probably faster than calling per
+  paginates_per 5
   
+  has_many :answers  
   validates_presence_of :text
   
   def build_chart_js
