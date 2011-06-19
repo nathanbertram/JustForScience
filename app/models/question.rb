@@ -3,6 +3,16 @@ class Question < ActiveRecord::Base
   
   validates_presence_of :text
   
+  def build_chart_js
+    output = "data.addRows(#{answers.size});\n"
+    answers.each_with_index do |answer, index|
+      output += "data.setValue(#{index}, 0, '#{answer.text}');\n"
+      output += "data.setValue(#{index}, 1, #{answer.votes || 1});\n"
+    end
+    
+    output
+  end
+  
   def self.random_not_in(not_in_ids = [])
     if not_in_ids.empty?
       random
