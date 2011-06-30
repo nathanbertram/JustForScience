@@ -3,7 +3,7 @@ class SuggestionMailer < ActionMailer::Base
   
   def notify(suggestion)
     @suggestion = suggestion
-    mail(:to => ["nathan@competitortab.com", "andrew@competitortab.com"], :subject => "CompetitorTab - Contact Form")
+    mail(:to => ["nathan@competitortab.com", "andrew@competitortab.com"], :subject => "JustForScience! - Scientific Evidence")
   end
 
 end
