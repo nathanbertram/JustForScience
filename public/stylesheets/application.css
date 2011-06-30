@@ -72,10 +72,12 @@ fieldset ul li {
   font-family: 'Hammersmith One', Helvetica, Arial, Verdana, sans-serif
   display: block;
   width: 700px;
-  height: 40px;
-  line-height: 40px;
+  height: 75px;
+  line-height: 75px;
   text-indent: 50px;
-  background: #ec1c00;
+  font-size: 25px;
+  font-weight: normal;
+  background: #ec1c00 url('/images/header.png') 282px 0 no-repeat;
   color: #fff;
   border-bottom: 5px solid #d31900;
 }
