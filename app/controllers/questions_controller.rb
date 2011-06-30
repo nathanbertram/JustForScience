@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   before_filter :find_or_create_user_session
   
   def index
-    @questions = Question.order(:created_at).page(params[:page] ? params[:page] : 1)
+    @questions = Question.order("created_at DESC, id DESC").page(params[:page] ? params[:page] : 1)
   end
   
   def random
