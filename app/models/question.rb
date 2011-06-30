@@ -7,7 +7,7 @@ class Question < ActiveRecord::Base
   
   def build_chart_js
     output = "data.addColumn('string', 'Task');\n"
-    output += "data.addColumn('number', '#{self.text}');\n"
+    output += "data.addColumn('number', '#{self.text.gsub('\'','').gsub('""','')}');\n"
     output += "data.addRows(#{answers.size});\n"
     answers.each_with_index do |answer, index|
       output += "data.setValue(#{index}, 0, '#{answer.text}');\n"
