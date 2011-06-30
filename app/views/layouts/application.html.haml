@@ -4,7 +4,9 @@
     %title JustForScience.com
     %meta{:name => 'description', :content => 'Experiment just for science!'}
     = stylesheet_link_tag 'application'
-    
+    :plain
+      <link href='http://fonts.googleapis.com/css?family=Hammersmith+One&v2' rel='stylesheet' type='text/css'>
+      
     - if Rails.env.production?
       :plain
         <script type="text/javascript">
@@ -19,7 +21,11 @@
         </script>
   %body
     #container
-      = yield
+      %h2.main_site_title
+        = link_to 'JustForScience.com', root_path
+      #container_content
+        = yield
+      %br
     %p#footer
       = link_to "Random question", random_questions_path
       |

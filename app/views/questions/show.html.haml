@@ -1,14 +1,19 @@
 - if @user_session.voted_for?(@question.id)
   %h1
     Thanks for contributing to science!
+
   = render :partial => "twitter_share"
   = render :partial => "gantt_chart", :locals => {:ganttable => @question, :element_id => "science_chart" }
 
   #science_chart
+  
 - else
-  %h2
-    = @question.text
-  %ul
+  - if @question.preview_image
+    = image_tag(@question.preview_image)
+  - else
+    %h2
+      = @question.text
+  %ul#question_answer_prompt
     - @question.answers.each do |answer|
       %li
         = link_to answer.text, vote_for_question_path(@question, :answer_id => answer.id)

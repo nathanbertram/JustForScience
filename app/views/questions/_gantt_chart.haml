@@ -9,6 +9,6 @@
         #{ganttable.build_chart_js}
         
         var chart = new google.visualization.PieChart(document.getElementById('#{element_id}'));
-        chart.draw(data, {width: 800, height: 425, backgroundColor: '#eeeeee', fontSize: 16, is3D: true, legend: 'bottom'});
+        chart.draw(data, {width: 600, height: 425, backgroundColor: '#fff', title: "#{@question.text}", fontSize: 16, is3D: true, legend: 'bottom'});
       }
     </script>
