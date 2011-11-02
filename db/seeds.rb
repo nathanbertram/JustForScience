@@ -1,3 +1,4 @@
+
 question = Question.new(:text => "What's the better horned creature?", :preview_image => "betterhornedcreature.png")
 question.answers << Answer.new(:text => 'Narwhals', :vote_count => 1)
 question.answers << Answer.new(:text => 'Unicorns', :vote_count => 1)
